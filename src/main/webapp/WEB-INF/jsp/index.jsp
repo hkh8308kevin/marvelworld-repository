@@ -11,7 +11,7 @@
         </h3>
     <img src="images/marvel3.jpg" alt="logo"><br><br><br>
      <div style="width:200px; height:336px; float:left;margin-bottom:30px;margin-left:380px">
-           <img src="images/1.jpg" alt="item1">
+           <img src="giimages/1.jpg" alt="item1">
         </div>   
        <div style="width:200px; height:336px; float:left;margin-bottom:30px;margin-left:80px">
            <img src="images/2.jpg" alt="item2">
