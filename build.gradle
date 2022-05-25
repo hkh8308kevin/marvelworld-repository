@@ -5,7 +5,9 @@ plugins {
 	id 'war'
   /* id 'com.google.cloud.tools.jib' version '3.2.1' */
 }
-
+apply plugin:'war'
+bootWar.enabled = false
+war.enabled = true
 /** 
 jib {
     from {
