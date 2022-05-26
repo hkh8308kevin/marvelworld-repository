@@ -5,7 +5,7 @@ pipeline {
     }
 
     environment {
-        imagename = "mavelworld-deploy"
+      //imagename = "mavelworld-deploy"
         registryCredential = 'dockerhub_access'
         dockerImage = ''
     }
@@ -48,9 +48,7 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Docker'
-            script {
-                dockerImage = docker.build imagename
-            }
+              app = docker.build("hkh8308/marvelworld")
           }
           post {
             failure {
@@ -64,11 +62,9 @@ pipeline {
           agent any
           steps {
             echo 'Push Docker'
-            script {
-                docker.withRegistry( '', registryCredential) {
-                    dockerImage.push("docker tag name")  // ex) "1.0"
-                }
-            }
+            docker.withRegistry( '', registryCredential) {
+             app.push("${env.BUILD_NUMBER}")
+             app.push("latest")
           }
           post {
             failure {
