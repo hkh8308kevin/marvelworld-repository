@@ -23,4 +23,4 @@ node {
              app.push("latest") #image에 latest를 태그로 붙인 후 Push
      }
   }
-}
+} */
