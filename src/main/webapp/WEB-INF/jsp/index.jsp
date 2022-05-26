@@ -7,7 +7,7 @@
  <body 
         style="text-align:center;">
         <H3>
-        <p style="color:rgb(4, 29, 247);"> WELCOME TO MARVEL WORLD 2.0</p>
+        <p style="color:rgb(247, 4, 4);"> WELCOME TO MARVEL WORLD 1.0</p>
         </h3>
     <img src="images/marvel3.jpg" alt="logo"><br><br><br>
      <div style="width:200px; height:336px; float:left;margin-bottom:30px;margin-left:380px">
