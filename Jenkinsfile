@@ -31,12 +31,10 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            dir ('.'){
-                sh '''
+             sh '''
                   ./gradle clean bootWar --exclude-task test
                 '''
-            }
-          }
+             }
           post {
             failure {
               error 'This pipeline stops here...'
