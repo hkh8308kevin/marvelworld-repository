@@ -35,7 +35,7 @@ pipeline {
           steps {
             echo 'Bulid Gradle'
             sh 'gradle clean'
-            sh 'gradle bootWar'
+           // sh 'gradle bootWar'
           post {
             failure {
               error 'This pipeline stops here...'
