@@ -40,6 +40,7 @@ pipeline {
               error 'This pipeline stops here...'
             }
           }
+         }    
         }
         
         // docker build
