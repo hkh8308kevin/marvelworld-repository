@@ -4,8 +4,8 @@ LABEL maintainer="dohun.ham@cloudmt.co.kr"
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-ARG WAR_FILE=marvelworld-0.0.1-SNAPSHOT.war
-COPY {WAR_FILE} /root/marvelworld.war
+RUN mv marvelworld-0.0.1-SNAPSHOT.war marvelworld.war 
+COPY marvelworld .
 ENTRYPOINT ["java","-jar","marvelworld.war"]
 
 
