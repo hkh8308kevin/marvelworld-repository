@@ -34,14 +34,18 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh 'gradle clean'
-            sh 'gradle bootWar'
+            dir ('.'){
+                sh """
+                ./gradlew clean build --exclude-task test
+                """
+            }
+          }
           post {
             failure {
               error 'This pipeline stops here...'
             }
           }
-         }    
+        }   
         
         // docker build
         stage('Bulid Docker') {
