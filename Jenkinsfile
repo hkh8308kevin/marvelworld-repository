@@ -32,7 +32,9 @@ pipeline {
           steps {
             echo 'Bulid Gradle'
             dir ('.'){
-                sh './gradle clean bootWar --exclude-task test'
+                sh '''
+                  gradle clean bootWar --exclude-task test
+                '''
             }
           }
           post {
