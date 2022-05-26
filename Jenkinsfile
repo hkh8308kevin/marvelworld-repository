@@ -12,7 +12,7 @@ node {
          }
      }
 }
-
+/*
 stage('Build image') {
   app = docker.build("hkh8308/marvelworld")
 }
