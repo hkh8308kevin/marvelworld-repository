@@ -34,7 +34,10 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh 'gradle clean build --exclude-tast test'
+            dir(','){
+            sh """
+            gradle clean build --exclude-tast test
+            """
             }
           post {
             failure {
