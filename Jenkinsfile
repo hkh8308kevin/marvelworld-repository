@@ -32,7 +32,7 @@ pipeline {
           steps {
             echo 'Bulid Gradle'
             dir ('.'){
-                sh './gradle clean build --exclude-task test'
+                sh './gradlew clean build --exclude-task test'
             }
           }
           post {
