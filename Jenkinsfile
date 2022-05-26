@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    tools {
+      gradle 'gradle-7.4.2'
+    }
+    
     environment {
         imagename = "mavelworld-deploy"
         registryCredential = 'dockerhub_access'
