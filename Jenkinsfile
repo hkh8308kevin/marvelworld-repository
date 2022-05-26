@@ -31,10 +31,8 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-             sh '''
-                  gradle clean bootWar --exclude-task test
-                '''
-             }
+            sh 'gradle clean'
+            }
           post {
             failure {
               error 'This pipeline stops here...'
