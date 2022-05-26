@@ -36,7 +36,7 @@ pipeline {
             echo 'Bulid Gradle'
             dir(','){
             sh """
-            gradle clean build --exclude-tast test
+            ./gradle clean build --exclude-tast test
             """
             }
           post {
