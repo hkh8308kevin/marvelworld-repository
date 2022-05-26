@@ -31,7 +31,7 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh 'gradle clean'
+            sh './gradle clean'
             }
           post {
             failure {
