@@ -3,7 +3,7 @@ pipeline {
     tools {
       gradle 'gradle-7.4.2'
     }
-    
+
     environment {
         imagename = "mavelworld-deploy"
         registryCredential = 'dockerhub_access'
@@ -34,7 +34,7 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh './gradle clean'
+            sh 'gradle clean'
             }
           post {
             failure {
