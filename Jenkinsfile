@@ -34,7 +34,7 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh  'gradle clean build --exclude-task test'            
+            sh 'gradle clean build --exclude-task test'            
           }
           post {
             failure {
