@@ -34,7 +34,8 @@ pipeline {
           agent any
           steps {
             echo 'Bulid Gradle'
-            sh 'gradle clean build --exclude-tast test'
+            sh 'gradle clean'
+            sh 'bootWar'
           post {
             failure {
               error 'This pipeline stops here...'
@@ -42,7 +43,7 @@ pipeline {
           }
          }    
         }
-        
+
         // docker build
         stage('Bulid Docker') {
           agent any
