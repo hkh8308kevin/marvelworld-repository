@@ -1,6 +1,12 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
-
 LABEL maintainer="dohun.ham@cloudmt.co.kr"
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt upgrade -y
+RUN apt-get update -y
+
+VOLUME /tmp
+ARG WAR_FILE=./target/marvelworld-0.0.1-SNAPSHOT.war
+ADD ${WAR_FILE} marvelworld.war
+ENTRYPOINT ["java","-jar","/marvelworld.war"]
 
